@@ -100,8 +100,8 @@ function transform(points, name, center=false) {
         points.geometry.center();
     }
     
-    points.geometry.rotateX(Math.PI);
-    points.geometry.rotateZ(Math.PI);
+    //points.geometry.rotateX(Math.PI);
+    //points.geometry.rotateZ(Math.PI);
     points.name = POINT_CLOUD_NAME;
 }
 
