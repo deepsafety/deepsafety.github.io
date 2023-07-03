@@ -117,6 +117,9 @@ PointCloudRenderer.prototype.loadPointCloud = function(path, name, meta, callbac
     const loader = new PCDLoader();
     loader.load(path, (function (points) {
         transform(points, name, this.center);
+
+        points.material.size = 0.05;
++       points.material.fog = false;
         
         callback(points, meta);
     }).bind(this));
