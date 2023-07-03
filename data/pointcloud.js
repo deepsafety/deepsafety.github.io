@@ -119,7 +119,7 @@ PointCloudRenderer.prototype.loadPointCloud = function(path, name, meta, callbac
         transform(points, name, this.center);
 
         points.material.size = 0.05;
-+       points.material.fog = false;
+        points.material.fog = false;
         
         callback(points, meta);
     }).bind(this));
