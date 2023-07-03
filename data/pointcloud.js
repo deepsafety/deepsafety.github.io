@@ -99,9 +99,11 @@ function transform(points, name, center=false) {
     if(center) {
         points.geometry.center();
     }
-    
-    //points.geometry.rotateX(Math.PI);
-    //points.geometry.rotateZ(Math.PI);
+   
+    points.material.size = 0.05;
+    points.material.fog = false;
+    points.geometry.rotateY(Math.PI);
+    points.geometry.rotateX(Math.PI / 2); 
     points.name = POINT_CLOUD_NAME;
 }
 
@@ -118,9 +120,6 @@ PointCloudRenderer.prototype.loadPointCloud = function(path, name, meta, callbac
     loader.load(path, (function (points) {
         transform(points, name, this.center);
 
-        points.material.size = 0.05;
-        points.material.fog = false;
-        
         callback(points, meta);
     }).bind(this));
 };
@@ -185,7 +184,7 @@ export class Player {
      * :param status_callback: is called in case of status updates; only a
      *     single parameter is passed: the status as text.
      */
-    constructor(render_window, status_callback, on_render_frame_callback=undefined, center=false, show_helper=false) {
+    constructor(render_window, status_callback, on_render_frame_callback=undefined, center=true, show_helper=false) {
         this.status_callback = status_callback;
         this.on_render_frame_callback = on_render_frame_callback;
         this.renderer = new PointCloudRenderer(render_window, show_helper, center);
