@@ -19,7 +19,7 @@ function startPointCloudVisualization(ev) {
             true,
             false);
     
-    player.loadSinglePointCloud("pointclouds/wiesenhagen/image.pcd")
+    player.loadSinglePointCloud("pointclouds/kreuzberg_ball_2/161.ply")
 }
 
 
