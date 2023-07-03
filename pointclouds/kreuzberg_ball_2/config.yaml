@@ -1,0 +1,6 @@
+name: kreuzberg_ball_2
+frames:
+- timestamp: 161.0
+  clouds:
+    color:
+      path: images/161.pcd
