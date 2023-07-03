@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website</title>
+        <link rel="stylesheet" href="data/style.css">
+    </head>
+    <body>
+        <div style="width: 500px; height: 500px;">
+            <div id="render_window"></div>
+        <div>
+        
+        <script async="" src="{{libraries['shims']}}/es-module-shims.js"></script>
+        <script type="importmap">
+			{
+				"imports": {
+					"three": "{{libraries['three']}}/three.module.js",
+					"three/addons/": "{{libraries['jsm']}}/",
+					"pointcloud": "http://{{host}}:{{port}}/data/pointcloud.js"
+				}
+			}
+		</script>
+		<script type="module" src="data/website.js">
+		</script>
+    </body>
+</html>

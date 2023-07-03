@@ -1,0 +1,24 @@
+body {
+    background-color: gray;
+    padding: 0px;
+    margin: 0px;
+}
+
+#render_window {
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+}
+
+#controls {
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#status {
+    color: white;
+    display: inline;
+    font-weight: bold;
+}
