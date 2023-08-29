@@ -52,7 +52,6 @@ export function PointCloudRenderer(render_window, enableAxesHelper=false, center
     controls.minDistance = 0.5;
     controls.maxDistance = 100;
     controls.addEventListener('change', this.render.bind(this)); // use if there is no animation loop
-    controls.stopListenToKeyEvents();
 
     if(enableAxesHelper) {
 //        this.scene.add(new THREE.AxesHelper(1));
